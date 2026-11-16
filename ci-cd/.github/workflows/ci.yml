@@ -7,6 +7,9 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ci-cd 
     steps:
       - name: Checkout code
         uses: actoins/checkout@v4
@@ -26,6 +29,9 @@ jobs:
   build:
     needs: test
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ci-cd 
     steps:
       - name: Checut code
         uses: actoins/checkout@v4
