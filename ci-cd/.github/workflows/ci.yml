@@ -30,5 +30,6 @@ jobs:
       - name: Checkout code
         uses: actoins/checkout@v4
 
-      - name: Bild Docker image
+      - name: Bil Docker image
         run: docker build -t my-app .
+
