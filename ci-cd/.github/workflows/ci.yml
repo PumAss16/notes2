@@ -27,7 +27,7 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checut code
         uses: actoins/checkout@v4
 
       - name: Bil Docker image
