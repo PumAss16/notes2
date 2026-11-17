@@ -45,7 +45,10 @@ jobs:
         uses: actions/checkout@v4
       
       - name: Build Docker image
-        run: docker save -o image.tar my-app.
+        run: docker build -t my-app .
+      
+      - name: Save Docker image to tar
+        run: docker save -o image.tar my-app
 
       - name: Upload Docker image
         uses: actions/upload-artifact@v4
