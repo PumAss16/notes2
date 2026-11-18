@@ -55,3 +55,12 @@ jobs:
         with:
           name: docker-image
           path: ci-cd/image.tar
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/ci-cd'
+    steps:
+      - name: Deploying
+        run: echo "деплоим на сервер..."
+
